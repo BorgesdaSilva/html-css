@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /* SELETORES PERSONALIZADOS
+        Simbologia
+        # = id
+        . = class
+        : = pseudo-class
+        :: = pseudo-element
+        > = clildren     
+        */
+
+       body {
+        font-family: Arial, Helvetica, sans-serif;
+       } 
+
+       a {
+            color:red;
+            text-decoration: none; 
+            font-weight: bold;
+            /*Essa linha text-decoration: none é para tirar sublilinhado*/
+            /*Essa linha é para deixar a fonte em NEGRITO font-weight: bold*/
+       }
+
+       a:visited {
+            color: darkred;
+       }
+
+       a:hover {
+        color: black;
+        text-decoration: underline;
+        /* Essa linha text-decoration: underline é para deixar o texto sublilinhado quando passar o mause*/
+       }
+        
+       a:active {
+        color:blue
+       }
+
+       .especial {
+        background-color: green;
+        /*Essa linha pinta o link*/
+
+
+       }
+
+       a::before {
+        content: '⇒ ';
+       }
+       a::after {
+        content: ' ⇐';
+       }
+
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+   <li><a href="https://gustavoguanabara.github.io"target="_blank">Repositório Github</a></li>
+   <li><a href="https://youtube.com/cursoemvideo/"target="_blank">Canal do YouTube</a></li>
+   <li><a href="https://www.cursoemvideo.com"target="_blank">Site do cursoemVideo</a></li>
+   <li><a href="https://www.jw.org" class="especial" target="_blank"> Site jw.org</a></li>
+   <li><a href="https://www.google.com.br" class="especial" target="_blank"> Site google.com.br</a></li>
+    <!--target="_blank" é para abrir outra pagina de navegação-->
+    </ul>
+   </body>
+</html>

@@ -1,0 +1,220 @@
+@charset "UTF-8"; /*@charset "UTF-8" é uma tag para comunicar aos navegadores qual é o formato de codificação de caracteres utilizado naquele documento*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'); /*@import serve para carregar arquivos externo para dentro do CSS*/
+
+@font-face { /* @font-face permite que a pessoa utilize fontes que não estão instaladas no computador do usuário*/
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format(opentype); /* ../fontes/idroid.otf Esses dois pontos significa a pasta anterior */
+    font-weight: normal;
+}
+:root { /* O root serve para selecionar elemento no documento ou em uma pasta */
+    --cor0: #c5ebd6; /*Essas linhas se chama variaveis*/
+    --cor1: #c5ebd6;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Verdana, helvetica, sans-serif;
+    --fonte-destaque:'Bebas Neue', sans-serif;
+    --fonte-android: 'Android', sans-serif;
+    }
+
+    * { /* Esse asterisco ou essa linha serve para tirar dodas as margens*/
+        margin: 0px;
+        padding: 0px;
+    }
+
+body { /* O body é usado para definir um conteúdo principal de documento ou de uma pagina*/
+    background-color: var(--cor0); /*Essa linha é a cor da pagina*/
+    font-family: var(--fonte-padrao);
+}
+
+/*Aqui serve para configurar links externo para que isso aconteça precisamos ir lá no HTML e colocar a class="externo" em cada um dos links */
+a.externo::after {
+    content: '\00A0\1F517';
+}
+
+/* O header é para definir o cabeçalho de uma seção ou de um documento HTML. Serve também para incluir logotipos, titulos, menus de navegação, barra de pesquisa como outros elementos*/
+header { 
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5)); /* Essa linha é para colocar um degradê no cabeçario*/
+    min-height: 150px; /* Essa linha é para almentar o cabeçalho (cima)*/
+    text-align: center; /* Essa linha é para centralizar a frase do cabesalho no centro da página*/
+    padding-top: 40px; /* Essa linha serve para colocar uma margem para não ficar colada no roda pé da página*/
+
+}
+header > h1 {
+    color: white; /* Essa linha é para mudar a cor do cabeçario*/
+    font-family: var(--fonte-destaque);
+    font-family: 3em;
+    font-weight: normal; /* Essa linha serve para tirar o negrito*/
+    margin-bottom: 20px; /* essa linha serve para colocar um espaço ou a distância de uma frase e outra*/
+    text-shadow: 2px 2px 0px black; /* Essa linha server para colocar uma sombra no texto */
+
+}
+header > p {
+    font-family:var(--fonte-padrao);
+    font-size: 1.2em;
+    color: white;
+    max-width: 700px;
+    padding-right: 10px; /* Essa linha serve para colocar uma margem dos lados*/
+    padding-left: 10px;
+    margin: auto; /* Essa linha serve para centrzar uma frase*/
+    padding-bottom: 50px;
+    text-shadow: 2px 2px 0px black; /* Essa linha server para colocar uma sombra no texto */
+    
+}
+/*Menu*/
+nav { /* Nav é usado para definir uma seção de navegação em um documento HTML. Ela é usado para agrupar os links de navegador, como menus, barras de navegação ou listade links para outras parte do site*/
+    background-color: var(--cor5);
+    padding: 10px;
+    box-shadow: 0px 7px 9px black; /* Essa linha server para colocar uma sombra */
+}
+
+/* Faz parte do menu*/
+nav > a {
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none; /* essa linha server para tirar o sombreado */
+    font-weight: bold; /* Essa linha server para colocar a fonte em negrito*/
+    transition-duration: 0.5s; /* essa linha server para quando levar o mause em cima vai levar 0.5 segundo para fazer a trasição de um menu para outro*/
+    /*background-color: blue;*/
+}
+
+/*Faz parte do menu*/
+nav > a:hover { /* Essas linha server para quando passar o mause em cima do menu ela muda de cor */
+    background-color: var(--cor2);
+    color: var(--cor4);
+}
+main { /* Main é usada para marcar o conteúdo principal de um documento. Ele representa o cabeçalhos, rodapés, barras laterais e outras seções e ajuda a melhorar a acessibilidade do site. */
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px; /* Essa linha serve para colocar uma margem embaixo do rodapé*/
+    padding: 20px; /* Essa linha é para criar uma margem*/
+    background-color: white;
+    box-shadow: 0px 0px 10px black; /* Essa linha é para criar uma sobra ou um contorno na página*/
+    border-bottom-left-radius: 10px; /* Essa linha serve para colocaer uma aredodamento no canto (embaixo) */
+    border-top-right-radius: 10px;
+}
+
+main h1 {
+    color: var(--cor3);
+    font-family: var(--fonte-android);
+    font-weight: normal; /* Essa linha serve para tirar o negrito */
+    font-size: 1.8em;
+}
+
+/*aqui serve para configurar dos h2 da página*/
+main h2 {
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em; /* Essa linha serve para aumentar a fonte*/
+    font-weight: normal; /* Essa linha serve para tirar o negrito */
+    background-image: linear-gradient(to right,var(--cor1),transparent); /* Essa linha serve para colocar um degrader */
+    text-indent: 8px;
+}
+
+/*Aqui é para todos os páragrafo*/
+main p {
+    margin: 15px 0px; /* Essa linha é para criar uma margfem en cima e em baixo */
+    text-align: justify; /* Essa linha server para alinha ou justificar o texto */
+    text-indent: 30px; /* essa linha serve para recuar o páragrafo um pouquinho*/
+   font-size: 1em; /* Essa linha é para mecher na fonte*/
+    line-height: 1.5em; /* Essa linha serve para colocar um edspaço de uma linha e outra */
+}
+/*Aqui é para mudar a cor das letras que estão no meio do páragrafo*/
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+    /*background-color: var(--cor1); /* Essa linha serve para tarjar o texto */
+    /*padding: 2px 6px; /* Essa linha serve para da espaço na frase */
+}
+/*Aqui é para configurar os links do conteudo */
+main a {
+    text-decoration: none;
+    font-weight: bold; /* Essa linha deixa a fonte em negrito */
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+/*Aqui serve para quando colocar o mause em cima vai ganhar o sublilhado*/
+main a:hover {
+text-decoration: underline;
+color: var(--cor4);
+}
+
+main img {
+    width: 100%;
+}
+/* Imagem do Adroid com o homem*/
+main img.pequena {
+    max-width: 350px; /* Essa linha server para aumentar o tamanho da imagem*/
+    display: block; /* Essa linha server para colocar uma margem */
+    margin: auto; /* Essa linha server para colocar a imagem no centro da página*/
+}
+
+/*Configuração do video*/
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}   
+
+div.video > iframe {
+position: absolute;
+top: 5%;
+left: 5%;
+width: 90%;
+height: 90%;
+}
+
+/* Aqui é para configurar a lista ou seja (Quer aprender mais?) */
+aside {
+    background-color: var(--cor1); /* Essa linha serve para colocar uma cor de fundo */
+    padding: 10px;
+    border-radius: 10px; /* Essa linha serve para deixar os cantos arredondado*/
+    box-shadow: 3px 3px 8px black; /* Essa linha é para colocar um sombreamento na caixa lista */
+}
+
+/* Aqui é para configurar (Quer aprender mais?) Está debaixo do video e ensima da lista */
+aside > h3 {
+    background-color: var(--cor4); 
+    color: wheat; /* Aqui é a cor do texto*/
+    padding: 10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+/* Aqui é para configurar ul ou seja as bolinhas da lista */
+aside > ul {
+    list-style-type: '\2714\00A0\00A0'; /* Essa linha serve para colocar esse sinal ✔️ (Check Mark )na lista esse \2714\00A0\00A0 serve para dá o espaço entre o número e ✔️ (Lembrando essa função não é compativel a todos os navegador */
+    list-style-position: inside; /* Essa linha é para configurar as bolinhas da lista */
+    columns: 2; /* Essa linha serve para divir a lista em duas colunas */
+}
+/*Aqui é para configurar o parágrafo e o link no rodapé */
+footer { /* O Fooder é usado para marcar uma area como rodapé do conteúdo de uma seção */
+    background-color: var(--cor5);
+    color: white;
+    text-align: center; /* Essa linha serve para sentralizar o texto */
+    font-size: 0.8em;
+    padding: 5px;
+}
+/*Aqui é para configurar o páragrafo e o link no rodapé */
+footer > p > a {
+    color: white;
+    font-weight: bolder; /* Essa linha serve para colocar um sublinhado */
+    text-decoration: none; /* Essa linha serve para tirar o sublinhado */
+}
+
+/*Aqui é para configurar o páragrafo e o link no rodapé */
+footer a:hover {
+    text-decoration: underline; /* Essa linha serve para quando colocar o em cima ele mostrar o link */
+    color: var(--cor1); /* Essa serve para colocar uma cor de fundo */
+}
+
