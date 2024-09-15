@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 14</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table { /*sim*/
+            width: 50px;
+            border-collapse: collapse;
+            position: relative;
+         
+            
+        }
+        td, th { /*sim*/
+            border: 2px solid black;
+            padding: 10px;  
+            text-align: left;
+            
+        }
+        thead { /*sim*/
+            background-color: gray;
+            color: white;  
+        }
+            tfoot { /*sim*/
+            background-color: gray;
+            color: white;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Desafio 14 Tabela</h1>
+    <!--ANATOMIA DE TABELAS GRANDES
+        TABLE 
+            CAPTION TRADUZIDO LEGENDA DA TABELA
+             THEAD CABESALHO
+                TR, TD, TH
+             TBODY CORPO
+                TR, TD, TH 
+             TFOOT RODAPÉ
+                TR, TD, TH
+             
+             = -->
+    <table>
+             <thead>
+            <tr>
+                <th rowspan="2">Área</th>
+                <th rowspan="2" style="width: 100px;">Disciplinas</th>
+                <th>Notas</th>
+                <th>Notas 1</th>
+                <th>Nota 2</th>
+                <th>Média</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th colspan="5" style= "width: 10px;"> Média de Humanas</th> <!--Titulo usa th-->
+                <td class="num"><strong>0.0</strong></td>
+                
+               
+                  
+            </tr>
+        </tfoot>
+        
+    <tbody>
+      
+       
+        <tr>
+            <td rowspan="4">Exatas</td>
+            <td colspan="2" style= "width: 100px;">Matemática</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td><tr>
+            <td colspan="2" style= "width: 100px;">física</td>  
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td><tr>
+            <td  colspan="2" style= "width: 100px;">Química</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td><tr>
+            <td colspan="2" style= "width: 100px;">Biologia</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td><tr>
+            <th colspan="5" style="width: 100px;"> Média de Exatas</th> 
+            <td>0.0</td></tr>
+            <td rowspan="3">Humanas</td>
+            <td colspan="2" style="width: 100px;">História</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td><tr>
+            <td colspan="2" style="width: 100px;">Geografia</td>
+            <td>0.0</td>
+            <td>0.0</td>
+            <td>0.0</td>
+
+        </tr> 
+        <tr>
+           
+
+    </tbody> 
+    
+     </table>
+   
+</body>
+</html>
